@@ -13,6 +13,7 @@ dist
 arch-studio-multi-page-website.fig
 dist-ssr
 *.local
+.history
 
 # Editor directories and files
 .vscode/*
