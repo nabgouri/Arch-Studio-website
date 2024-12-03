@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+dialog:modal {
+  background-color: red;
+  position: absolute;
+  inset: unset;
+  top: 97px;
+  right: 0;
+  /* width: 91.47%; */
+}
+
+ol {
+  counter-reset: my-ol-counter;
+}
+ol li {
+  counter-increment: my-ol-counter;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+@media (width < 768px) {
+  ol li::before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  ol li::before {
+    order: 999;
+    height: 200px;
+    padding-top: 2rem;
+    content: counter(my-ol-counter);
+    font-size: 15.625rem;
+    font-weight: bold;
+    line-height: 12.5rem;
+    color: white;
+    opacity: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  ol li {
+    flex-direction: column;
+    gap: 212px;
+    flex-grow: 1;
+    align-items: start;
+  }
+
+  ol li::before {
+    order: -1;
+    align-self: flex-end;
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  position: fixed;
+  inset: 0px;
+  margin: auto;
+  width: 50px;
+  height: fit-content;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #514b82;
+  animation:
+    l20-1 0.8s infinite linear alternate,
+    l20-2 1.6s infinite linear;
+}
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+.text-error::after {
+  content: "Cant be empty";
+  display: block;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 0px;
+  color: #df5656;
+  font-weight: bold;
+  z-index: 1000;
+}
