@@ -1,5 +1,5 @@
 import footerLogo from "../assets/footerLogo.svg";
-import NavList from "./navList";
+import NavList from "./NavList";
 import Button from "./Button";
 export default function Footer() {
   return (
