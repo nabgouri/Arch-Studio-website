@@ -1,7 +1,7 @@
 import { useState } from "react";
 import archLogo from "../assets/Arch 3.svg";
 import NavModal from "./NavModal";
-import NavList from "./navList";
+import NavList from "./NavList";
 import { motion } from "framer-motion";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
