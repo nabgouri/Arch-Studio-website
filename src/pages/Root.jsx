@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 export default function RootLayout() {
   return (
-    <article className="font-Spartan">
+    <article className="overflow-x-hidden font-Spartan">
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>

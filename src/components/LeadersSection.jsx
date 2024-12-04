@@ -12,7 +12,13 @@ export default function LeadersSection() {
       variants={sectionVariants}
       initial="initial"
       whileInView="inView"
-      transition={{ type: "spring", stiffness: 50, damping: 12, duration: 0.7 }}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+        damping: 12,
+        duration: 0.7,
+        delay: 0.2,
+      }}
       className="justify-between px-8 md:px-[6.0625rem] xl:flex xl:px-[10.25rem]"
     >
       <H2 className="md:mb-12">The Leaders</H2>

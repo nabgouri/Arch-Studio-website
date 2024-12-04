@@ -4,7 +4,7 @@ import heroImageTablet from "../assets/images/aboutImages/aboutImage-tablet.png"
 import heroImageMobile from "../assets/images/aboutImages/aboutImage-mobile.png";
 import DetailSection from "../components/DetailSection";
 import LeadersSection from "../components/LeadersSection";
-import secondaryImage from "../assets/images/aboutImages/Deatilimage.jpg";
+import secondaryImage from "../assets/images/aboutImages/aboutSecondImage.png";
 export default function AboutPage() {
   return (
     <main className="relative md:before:absolute md:before:left-2 md:before:top-16 md:before:block md:before:rotate-90 md:before:text-lg md:before:font-medium md:before:leading-6 md:before:tracking-[18px] md:before:text-[#c8ccd8] md:before:content-['ABOUT']">
