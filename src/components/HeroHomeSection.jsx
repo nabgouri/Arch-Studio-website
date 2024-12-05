@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
 import { motion } from "framer-motion";
+import mainHomeImage from "../assets/images/homeImages/mainHomeImage.png";
+import secondlyImage from "../assets/images/homeImages/secondlyImage.png";
+import thirdlyImage from "../assets/images/homeImages/thirdlyImage.png";
+import fourthImage from "../assets/images/homeImages/fourthImage.png";
 
 const HeroHomeSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImages = [
-    "src/assets/images/homeImages/mainHomeImage.png",
+    mainHomeImage,
 
-    "src/assets/images/homeImages/secondlyImage.png",
-    "src/assets/images/homeImages/thirdlyImage.png",
-    "src/assets/images/homeImages/fourthImage.png",
+    secondlyImage,
+    thirdlyImage,
+    fourthImage,
   ];
 
   const slideContent = [
