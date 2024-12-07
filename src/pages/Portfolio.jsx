@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
+// portfolio page
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL_KEY;
 const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 export default function PortfolioPage() {
